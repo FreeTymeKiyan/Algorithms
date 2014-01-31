@@ -1,7 +1,5 @@
 package com.freetymekiyan.sorting;
 
-import java.util.Arrays;
-
 /**
  * Runtime: O(nlog(n)) average and worse case
  * Memory: 	Depends
@@ -38,11 +36,10 @@ public class MergeSort {
 	 * @param high
 	 */
 	private static void merge(int[] array, int low, int middle, int high) {
-		int[] helper = new int[array.length];
+		int[] helper = new int[array.length]; // as large as the original array
 		for (int i = low; i <= high; i++) {
-			helper[i] = array[i];
+			helper[i] = array[i]; // only need this part of elements
 		}
-//		int[] helper = array;
 		
 		int helperLeft = low;
 		int helperRight = middle + 1;

@@ -29,7 +29,8 @@ public class Main {
 //		BubbleSort.sort(array);
 //		SelectionSort.sort(array);
 //		MergeSort.sort(array, 0, array.length - 1);
-		QuickSort.sort(array, 0, array.length - 1);
+//		QuickSort.sort(array, 0, array.length - 1);
+		RadixSort.sort(array, 2);
 		System.out.println(System.nanoTime() - startTime);
 		printArr(array);
 	}
