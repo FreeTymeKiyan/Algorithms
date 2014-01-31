@@ -19,10 +19,6 @@ import java.util.ArrayList;
  */
 public class RadixSort {
 	
-	public static void main(String[] args) {
-		
-	}
-	
 	public static void sort(int[] array, int maxDigits) {
 		int exp = 1; // 10^0
 		for(int i =0; i < maxDigits; i++){
