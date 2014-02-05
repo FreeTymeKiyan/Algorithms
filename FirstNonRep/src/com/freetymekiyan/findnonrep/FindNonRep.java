@@ -34,7 +34,7 @@ import java.util.Map.Entry;
  * count. As we all known, only 26 characters are there in 
  * English, and they've been already well coded in ASCII. So, 
  * if we get a character from the input, we may minus it by 'a'
- * to get an offset to reprent which character it is. These 
+ * to get an offset to represent which character it is. These 
  * offsets can be used as indices of an array of integers to 
  * represent count at the same time. Moreover, we need to insert 
  * these characters in order to an array to maintain the sequence. 
@@ -47,7 +47,7 @@ public class FindNonRep {
 	public static final int TOTAL_ALPHABET = 26;
 	
 	public static void main(String[] args) {
-		String input = "fabcdefcbeaghiadkl";
+		String input = "fabcdefcbeaghiadklz";
 //		lindkedHashMap(input);
 		System.out.println(selfBuildMap(input));
 	}
@@ -94,6 +94,4 @@ public class FindNonRep {
 		}
 		return result;
 	}
-	
-	
 }
