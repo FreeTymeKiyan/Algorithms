@@ -38,11 +38,13 @@ public class FindCommon {
 			arrayToSearch = A;
 		}
 		
+		// hashset created for search 
 		HashSet<Integer> hashedArr = new HashSet<>();
 		for (Integer entry : arrayToHash) {
 			hashedArr.add(entry);
 		}
 		
+		// hashset created for result
 		HashSet<Integer> intersetction = new HashSet<>();
 		for (Integer entry : arrayToSearch) {
 			if (hashedArr.contains(entry)) {
