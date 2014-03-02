@@ -20,14 +20,14 @@ public class FindRoute {
 	 * @return
 	 */
 	public static boolean findRoute(Graph g, Node start, Node end) {
-		 LinkedList<Node> queue = new LinkedList<Node>();
-		 for (Node u : g.getNodes()) {
+		LinkedList<Node> queue = new LinkedList<Node>();
+		for (Node u : g.getNodes()) {
 			u.state = State.Unvisited;
-		 }
-		 start.state = State.Visiting;
-		 queue.add(start);
-		 Node u;
-		 while (!queue.isEmpty()) {
+		}
+		start.state = State.Visiting;
+		queue.add(start);
+		Node u;
+		while (!queue.isEmpty()) {
 			u = queue.removeFirst();
 			if (u != null) {
 				for (Node v : u.getAdjacent()) {
@@ -41,7 +41,7 @@ public class FindRoute {
 			}
 			u.state = State.Visited;
 		}
-		 return false;
+		return false;
 	}
 	
 	public enum State {
