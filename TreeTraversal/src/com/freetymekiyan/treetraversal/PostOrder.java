@@ -3,7 +3,7 @@ package com.freetymekiyan.treetraversal;
 /**
  * Post-order traversal of a tree.
  * Root is visited after left subtree and 
- *  right subtree.
+ * right subtree.
  *
  * @author Kiyan
  */
@@ -15,6 +15,6 @@ public class PostOrder {
 		}
 		traversal(root.leftNode());
 		traversal(root.rightNode());
-		System.out.println(root.getNodeValue());
+		System.out.println(root.getNodeValue()); // visit function
 	}
 }

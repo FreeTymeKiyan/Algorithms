@@ -29,14 +29,10 @@ public class PrintMatrix {
 
 	private static void printMatrix(int[][] matrix, int[] indices) {
 		// check stop
-		boolean done = false;
 		for(int index : indices) {
 			if (index > matrix[1].length - 1) {
-				done = true;
+				return;
 			}
-		}
-		if (done) {
-			return;
 		}
 		// print
 		for (int i = 0; i < indices.length; i++) {

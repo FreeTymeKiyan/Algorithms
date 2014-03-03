@@ -33,6 +33,7 @@ public class QuickSort {
 	 * find element on left that should be on right
 	 * find element on right that should be on left
 	 * swap, move left and right indices
+	 * go on till crossed
 	 * 
 	 * @param array
 	 * @param left

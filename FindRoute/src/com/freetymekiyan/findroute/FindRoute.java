@@ -22,24 +22,24 @@ public class FindRoute {
 	public static boolean findRoute(Graph g, Node start, Node end) {
 		LinkedList<Node> queue = new LinkedList<Node>();
 		for (Node u : g.getNodes()) {
-			u.state = State.Unvisited;
+			u.state = State.Unvisited; // set all to Unvisited
 		}
-		start.state = State.Visiting;
-		queue.add(start);
+		start.state = State.Visiting; // visiting one
+		queue.add(start); // add to queue
 		Node u;
 		while (!queue.isEmpty()) {
-			u = queue.removeFirst();
+			u = queue.removeFirst(); // dequeue first one
 			if (u != null) {
 				for (Node v : u.getAdjacent()) {
-					if (v == end) {
+					if (v == end) { // found
 						return true;
 					} else {
-						v.state = State.Visiting;
+						v.state = State.Visiting; // visit adjacent
 						queue.add(v);
 					}
 				}
 			}
-			u.state = State.Visited;
+			u.state = State.Visited; // set to Visted
 		}
 		return false;
 	}

@@ -11,7 +11,7 @@ public class encoding {
 	
 	public static void main(String[] args) {
 		String src = "wwwwaaadexxxxxx";
-		StringBuffer dest = new StringBuffer();
+		StringBuilder dest = new StringBuilder();
 		
 		for (int i = 0; i < src.length(); i++) {
 			dest.append(src.charAt(i));

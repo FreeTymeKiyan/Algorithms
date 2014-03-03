@@ -17,9 +17,9 @@ public class MergeSort {
 	public static void sort(int[] array, int low, int high) {
 		if (low < high) {
 			int middle = (low + high) / 2; // change to low + (high - low) / 2, won't exceed integer limit
-			sort(array, low, middle);
-			sort(array, middle + 1, high);
-			merge(array, low, middle, high);
+			sort(array, low, middle); // sort left half
+			sort(array, middle + 1, high); // sort right half
+			merge(array, low, middle, high); // merge two halves
 		}
 	}
 
@@ -43,25 +43,25 @@ public class MergeSort {
 		
 		int helperLeft = low;
 		int helperRight = middle + 1;
-		int current = low;
+		int curIdx = low;
 		
 		while (helperLeft <= middle && helperRight <= high) { // till running out of elements
 			if (helper[helperLeft] <= helper[helperRight]) {
-				array[current] = helper[helperLeft];
+				array[curIdx] = helper[helperLeft];
 				helperLeft++;
 			} else {
-				array[current] = helper[helperRight];
+				array[curIdx] = helper[helperRight];
 				helperRight++;
 			}
-			current++;
+			curIdx++;
 		}
 		
 		/* Copy the rest of the left side of the array into the 
 		 * target array 
 		 * right side is already in it.*/
 		int remaining = middle - helperLeft;
-		for (int i = 0; i <= remaining; i++) {
-			array[current + i] = helper[helperLeft + i];
+		for (int i = 0; i <= remaining; i++) { // use <=, when it's zero, makes sense
+			array[curIdx + i] = helper[helperLeft + i];
 		}
 	}
 }

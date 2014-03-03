@@ -9,7 +9,7 @@ import java.util.LinkedList;
  * Write a method to sort an array of strings
  * so that all the anagrams are next to each other.
  * 
- * <p> a modification of BucketSort
+ * <p> A modification of BucketSort</p>
  * @author Kiyan
  */
 public class AnagramComparator implements Comparator<String>{
@@ -27,6 +27,7 @@ public class AnagramComparator implements Comparator<String>{
 	
 	public void sort(String[] array) {
 //		Arrays.sort(array, new AnagramComparator());
+		// use sorted chars as key, LinkedList to store
 		Hashtable<String, LinkedList<String>> hash = 
 				new Hashtable<String, LinkedList<String>>();
 		for (String s : array) {

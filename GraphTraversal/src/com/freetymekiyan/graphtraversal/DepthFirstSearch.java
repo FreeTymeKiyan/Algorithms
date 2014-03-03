@@ -8,17 +8,16 @@ package com.freetymekiyan.graphtraversal;
 public class DepthFirstSearch {
 	
 	public static void search(GraphNode root) {
-		if (root == null) {
+		if (root == null) { // error check
 			return;
 		}
-		visit(root);
-		root.visited = true;
-		for (GraphNode child : root.adjacent) {
-			if (!child.visited) {
+		visit(root); // visit
+		root.visited = true; // set visited true
+		for (GraphNode child : root.adjacent) { // search adjacent nodes
+			if (!child.visited) { // avoid loops
 				search(child);
 			}
 		}
-		
 	}
 
 	private static void visit(GraphNode root) {

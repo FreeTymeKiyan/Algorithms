@@ -14,7 +14,7 @@ public class InOrder {
 			return;
 		}
 		traversal(root.leftNode());
-		System.out.println(root.getNodeValue());
+		System.out.println(root.getNodeValue()); // visit function
 		traversal(root.rightNode());
 	}
 }

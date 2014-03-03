@@ -4,10 +4,12 @@ import java.util.HashSet;
 
 /**
  * How to Find Common Elements of Two UnSorted Array?
+ * <p>
  *	Find 1st small array.
  *	Iterate through small array and find elements in larger array.
  *	In case of match, add it to separate new array.
  *	Display final array.
+ * </p>
  *
  * @author Kiyan
  */

@@ -4,6 +4,7 @@ package com.freetymekiyan.treetraversal;
  * Pre-order traversal of a tree.
  * Root is visited before left subtree and 
  * right subtree.
+ * 
  * @author Kiyan
  */
 public class PreOrder {
@@ -12,7 +13,7 @@ public class PreOrder {
 		if (root == null) {
 			return;
 		}
-		System.out.println(root.getNodeValue());
+		System.out.println(root.getNodeValue()); // visit function
 		traversal(root.leftNode());
 		traversal(root.rightNode());
 	}

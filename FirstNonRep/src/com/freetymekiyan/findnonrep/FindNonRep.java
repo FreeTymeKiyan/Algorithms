@@ -89,7 +89,7 @@ public class FindNonRep {
 		}
 		
 		for (int i = 0; i <= charPos; i++) {
-			if (charCount[charIndex[i] - 'a'] == 1)
+			if (charCount[charIndex[i] - 'a'] == 1) // only showed one time
 				return charIndex[i];
 		}
 		return result;

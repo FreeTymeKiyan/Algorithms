@@ -8,21 +8,21 @@ package com.freetymekiyan.graphtraversal;
 public class BreadthFirstSearch {
 	
 	public static void search(GraphNode root) {
-		if (root == null) {
+		if (root == null) { // error check
 			return;
 		}
-		visit(root);
-		root.visited = true;
+		visit(root); // visit 
+		root.visited = true; // set visited true
 		Queue queue = new Queue();
-		queue.enqueue(root);
+		queue.enqueue(root); // enqueue current node
 		
 		while (!queue.isEmpty()) {
-			GraphNode r = (GraphNode) queue.dequeue();
-			for(GraphNode n : r.adjacent) {
+			GraphNode r = (GraphNode) queue.dequeue(); // dequeue first node
+			for(GraphNode n : r.adjacent) { // vist all adjacent nodes
 				if (!n.visited) {
 					visit(n);
 					n.visited = true;
-					queue.enqueue(n);
+					queue.enqueue(n); // enqueue visited node
 				}
 			}
 		}
