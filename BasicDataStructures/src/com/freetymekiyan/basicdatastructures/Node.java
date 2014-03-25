@@ -1,7 +1,7 @@
 package com.freetymekiyan.basicdatastructures;
 
 /**
- * implement a singly linkedlist 
+ * implement a unit of singly linkedlist 
  * 
  * @author Kiyan
  */
