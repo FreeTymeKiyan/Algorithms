@@ -41,7 +41,8 @@ public class QuickSort {
 	 * @return left index
 	 */
 	private static int partition(int[] array, int left, int right) {
-		int pivot = array[(left + right) / 2];
+//		int pivot = array[(left + right) / 2];
+		int pivot = array[MedianOfMedians.medianOfMedians(array, left, right)];
 		while (left <= right) {
 			while (array[left] < pivot) left++;
 			while (array[right] > pivot) right--;
